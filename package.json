@@ -1,0 +1,13 @@
+{
+  "name": "p2p-messenger-server",
+  "version": "1.0.0",
+  "description": "Ретранслятор для простого мессенджера. Ничего не хранит и не читает — только пересылает сообщения онлайн-абонентам из списка контактов.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}

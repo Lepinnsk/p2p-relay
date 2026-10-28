@@ -1,0 +1,14 @@
+# Конфигурация деплоя для Render (бесплатный хостинг).
+# Даёт постоянный публичный адрес вида https://<имя>.onrender.com
+# Для WebSocket-поддержки на Free-плане включите в панели Render:
+#   Settings -> Web Service -> WebSocket Support -> On
+# (Render подставляет свою переменную окружения PORT автоматически.)
+
+services:
+  - type: web
+    name: p2p-messenger-relay
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /
